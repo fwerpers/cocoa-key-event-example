@@ -4,11 +4,8 @@
 
 class NoteController {
  private:
-	std::map<int, bool> key_states = {
-		{11, false}, // b
-		{45, false}, // n
-		{46, false} // m
-	};
+	// Seems like 6 keys can be pressed simultaneously
+	std::map<int, bool> key_states;
  public:
 	void set_key(int keycode) {
 		if (!key_states[keycode]) {
